@@ -102,6 +102,7 @@ header > .container {
   text-decoration: none;
   padding: auto;
   display: block;
+  color: gray;
 }
 
 @media(max-width: 650px){
@@ -309,6 +310,7 @@ footer > .container {
 .footer-item {
   display: block;
   padding: 8px 0px;
+  color: gray;
 }
 
 .footer-item:hover {
