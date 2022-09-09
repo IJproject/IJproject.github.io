@@ -1,0 +1,317 @@
+/* 【大まかな構成】 
+    　１.それぞれのタグの初期設定
+    　２.ヘッダー
+    　３.メイン
+    　４.フッター
+    　※メディアクエリはそれぞれヘッダーとメイン、フッターの後に書いてあります。 */
+
+
+/* ----------common---------- */
+
+html { 
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "游ゴシック", "ヒラギノ角ゴ ProN", "メイリオ", "MS Pゴシック", sans-serif;
+  font-weight: bold;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+header, ul, li, h1, h2, h5, a, section {
+  margin: 0;
+}
+
+h5 {
+  font-size: 20px;
+  color: rgb(149, 105, 149);
+}
+
+.container {
+  width: calc(100% - 10%);
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+th, td {
+  padding:8px 16px;
+  text-align: center;
+}
+
+th {
+  background: rgba(192, 192, 192, .8);
+}
+
+tr:nth-child(odd) {
+  background: rgba(192, 192, 192, .3);
+}
+
+table {
+  margin: auto;
+}
+
+h4 {
+  background: rgba(192, 192, 192, .3);
+  font-size: large;
+}
+
+i {
+  padding-right: 8px;
+}
+
+
+
+/* ----------header---------- */
+
+header {
+  background: rgba(255, 255, 255, .3);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+header > .container {
+  margin-left: 0;
+}
+
+.menu-items {
+  list-style: none;
+  background: rgba(255, 255, 255, .3);
+  display: flex;
+  align-items: center;
+}
+
+.menu-items :hover {
+  background: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.menu-items li {
+  border: 1px solid #f3f3f3;
+  /* border-bottom: 4px solid #dedede; */
+  border-radius: 2px;
+  flex: 1;
+  text-align: center;
+  padding-top: 8px;
+  height: 32px;
+}
+
+.rink {
+  text-decoration: none;
+  padding: auto;
+  display: block;
+}
+
+@media(max-width: 650px){
+  .works {
+    display: none;
+  }
+}
+
+
+
+/* ----------main---------- */
+
+.seo {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.back-text {
+  font-size: 40px;
+  color: rgba(112, 112, 112, .6);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 40px;
+} 
+
+
+#home {
+  background: hsla(0, 100%, 75%, 0.2);
+  background-image: url(../images/home.png);
+  background-size: cover;
+  background-blend-mode: luminosity;
+  height: auto;
+  padding-top: 24px;
+}
+
+#home > .container {
+  padding-bottom: 64px;
+}
+
+h3 {
+  font-size: 50px;
+  transform: rotate(-16deg);
+  font-family: Lucida Calligraphy, Lucida Handwriting, Brush Script MT, cursive;
+  color: gray;
+}
+
+.home-spell-j {
+  font-size: 120px;
+  color: orangered;
+}
+
+.home-spell-p {
+  font-size: 120px;
+  color: orange;
+}
+
+#about {
+  background: hsla(72, 100%, 75%, 0.2);
+  background-image: url(../images/about.png);
+  background-size: cover;
+  background-blend-mode: luminosity;
+  height: auto;
+  padding-top: 24px;
+}
+
+#about > .container {
+  padding-bottom: 80px;
+}
+
+.about-me {
+  border-bottom: 3px solid rgb(208, 222, 165);
+  margin: 24px 30%;
+}
+
+#skills {
+  background: hsla(144, 100%, 75%, 0.2);
+  background-image: url(../images/skills.png);
+  background-size: cover;
+  background-blend-mode: luminosity;
+  height: auto;
+  padding-top: 24px;
+}
+
+#skills > .container {
+  padding-bottom: 64px;
+}
+
+.skill {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-types {
+  display: block;
+  margin: 24px auto;
+}
+
+.standard-border {
+  border: 2px solid rgb(190, 250, 225);
+  background-color: rgba(190,250,225,.3);
+  margin-top: 24px;
+  border-radius: 8px;
+}
+
+.standard-border p {
+  font-size: large;
+  font-weight: bold;
+}
+
+.level-standard {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.level-standard li {
+  padding: 8px 16px;
+}
+
+#works {
+  background: hsla(216, 100%, 75%, 0.2);
+  background-image: url(../images/works.png);
+  background-size: cover;
+  background-blend-mode: luminosity;
+  height: auto;
+  padding-top: 24px;
+}
+
+#works > .container {
+  padding-bottom: 240px;
+}
+
+.past-work {
+  font-size: 48px;
+}
+
+#contact {
+  background: hsla(288, 100%, 80%, 0.2);
+  background-image: url(../images/contact.png);
+  background-size: cover;
+  background-blend-mode: luminosity;
+  height: auto;
+  padding-top: 24px;
+}
+
+#contact > .container {
+  padding-bottom: 320px;
+}
+
+
+@media (min-width: 500px) and (max-width: 800px) {
+  h3 {
+    font-size: 80px;
+  }
+
+  h5 {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1000px){
+  h3 {
+    font-size: 100px;
+  }
+
+  h5 {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 1001px)  {
+  h3 {
+    font-size: 120px;
+  }
+
+  h5 {
+    font-size: 70px;
+  }
+}
+
+
+
+
+/* ----------footer---------- */
+
+footer {
+  background-color: white;
+}
+
+footer > .container {
+  margin: 32px 0px;
+  display: flex;
+}
+
+.foot { 
+  width: 50%;
+  text-align: center;
+}
+
+.footer-menu {
+  list-style: none;
+}
+
+.footer-item {
+  display: block;
+  padding: 8px 0px;
+}
+
+.footer-item:hover {
+  background: rgb(224, 225, 221);
+}
+
